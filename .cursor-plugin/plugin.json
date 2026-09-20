@@ -1,0 +1,11 @@
+{
+  "name": "compound-influence",
+  "displayName": "Compound Influence",
+  "version": "0.1.0-local",
+  "description": "Cursor skill verbund for QuintSmart offer, pricing, and stakeholder buy-in. Soft S03 Briefing Akte; frameworks bundled in-repo.",
+  "author": {
+    "name": "Sebastian Kamilli"
+  },
+  "license": "UNLICENSED",
+  "skills": "./skills/"
+}
