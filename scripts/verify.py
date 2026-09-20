@@ -27,7 +27,17 @@ from vault_paths import (  # noqa: E402
     is_under_plugin_checkout,
 )
 
-SKILLS = ("ci-akte", "ci-diagnose", "ci-frame", "ci-live")
+SKILLS = (
+    "ci-akte",
+    "ci-diagnose",
+    "ci-frame",
+    "ci-live",
+    "ci-pcg",
+    "ci-hic",
+    "ci-buyer",
+    "ci-mirror",
+    "ci-default",
+)
 
 WANG_ANCHORS = (
     "## Four stages",
@@ -42,6 +52,14 @@ NEGO_ANCHORS = (
     "## Labels",
     "## Compliance vs commitment",
     "## Silence vs pushback",
+)
+
+DEEP_CARDS = (
+    ("pain-cost-gain-card.md", ("## Three axes", "## Vitamin vs painkiller", "## Mirror when they do not feel it")),
+    ("headline-insights-cta-card.md", ("## Three parts", "## CTA needs the most discipline", "## Pyramid Principle vs H–I–CTA")),
+    ("buyer-map-card.md", ("## Know your buyer", "## Map more than the wallet", "## Wants / Fears / Constraints")),
+    ("authority-engagement-card.md", ("## Authority trap", "## Silence vs pushback", "## Compliance vs commitment")),
+    ("become-default-card.md", ("## Economics of trust", "## Operator moves")),
 )
 
 
@@ -89,15 +107,33 @@ def check_method(root: Path = ROOT) -> None:
     for anchor in NEGO_ANCHORS:
         if anchor not in nego_text:
             raise SystemExit(f"negotiation card missing anchor: {anchor}")
+    for filename, anchors in DEEP_CARDS:
+        path = root / "references" / filename
+        if not path.exists():
+            raise SystemExit(f"missing deep card: {filename}")
+        text = path.read_text(encoding="utf-8")
+        for anchor in anchors:
+            if anchor not in text:
+                raise SystemExit(f"{filename} missing anchor: {anchor}")
     diagnose = (root / "skills" / "ci-diagnose" / "SKILL.md").read_text(encoding="utf-8")
     frame = (root / "skills" / "ci-frame" / "SKILL.md").read_text(encoding="utf-8")
     live = (root / "skills" / "ci-live" / "SKILL.md").read_text(encoding="utf-8")
+    pcg = (root / "skills" / "ci-pcg" / "SKILL.md").read_text(encoding="utf-8")
+    hic = (root / "skills" / "ci-hic" / "SKILL.md").read_text(encoding="utf-8")
     if "ohne Akte" not in frame and "ohne-Akte" not in frame:
         raise SystemExit("ci-frame must document ohne-Akte path")
     if "ablehnen" not in live.lower():
         raise SystemExit("ci-live must document ablehnen leaves Akte unchanged")
     if "write-back" not in diagnose.lower() and "Write-back" not in diagnose:
         raise SystemExit("ci-diagnose must document write-back default")
+    if "references/pain-cost-gain-card.md" not in pcg:
+        raise SystemExit("ci-pcg must load pain-cost-gain-card.md")
+    if "references/headline-insights-cta-card.md" not in hic:
+        raise SystemExit("ci-hic must load headline-insights-cta-card.md")
+    if "ohne Akte" not in hic and "ohne-Akte" not in hic:
+        raise SystemExit("ci-hic must document ohne-Akte path")
+    if "one beat" not in pcg.lower() and "one-beat" not in pcg.lower():
+        raise SystemExit("ci-pcg must coach one beat per turn")
 
 
 def check_brand(root: Path = ROOT) -> None:

@@ -37,11 +37,11 @@ Skip phrases: `skip`, `ohne Akte`, `ablehnen`, `kein Write-back`.
 
 ## Write-back default
 
-After a usable Diagnose, Frame, or Live result:
+After a usable Diagnose, Frame, Live, or deep-coaching (`ci-pcg`, `ci-hic`, `ci-buyer`, `ci-mirror`, `ci-default`) result:
 
-1. Default: append a dated entry to the matching log section on the active Akte.
+1. Default: append a dated entry to the matching log section on the active Akte (and update the matching field sections: Buyer Map, Felt Problem, Open Ask, Default Status Notes).
 2. Operator may refuse with a skip phrase — then leave the Akte unchanged.
-3. Chat-only with an active Akte and no explicit skip is a fail for Diagnose/Frame when write-back was expected.
+3. Chat-only with an active Akte and no explicit skip is a fail for Diagnose/Frame/PCG/HIC when write-back was expected.
 4. Live: if the operator says ablehnen / skip, leave the Akte unchanged (AE3).
 
 ## Required sections
@@ -62,4 +62,6 @@ Do not wipe prior log entries when appending. Compress for clarity; do not erase
 
 ## Shared doors
 
-The four commands are equal entries. None forces the order of the others. All share this contract.
+Fast doors (`ci-akte`, `ci-diagnose`, `ci-frame`, `ci-live`) and deep coaching doors (`ci-pcg`, `ci-hic`, `ci-buyer`, `ci-mirror`, `ci-default`) are equal entries. None forces the order of the others. All share this contract.
+
+Deep cards live under `references/` (`pain-cost-gain-card.md`, `headline-insights-cta-card.md`, `buyer-map-card.md`, `authority-engagement-card.md`, `become-default-card.md`).

@@ -17,3 +17,11 @@ Arena-shaped starters. Not full case studies.
 ## Soft Akte
 
 > Gleiches Mandantenprojekt, Akte unter `S03 …/Briefing/influence-akte.md`. Zeig Open Ask und letzten Diagnose-Eintrag, dann einen neuen Framing-Durchlauf mit Write-back.
+
+## Deep coaching prompts
+
+> `/ci-pcg` — nur Pain diese Runde; dann Cost; Vitamin oder Painkiller benennen.  
+> `/ci-hic` — CTA zuerst (Verb + Deadline), dann Headline, dann drei Insights.  
+> `/ci-buyer` — nur Carrier-Map diese Runde; Open Ask danach.  
+> `/ci-mirror` — Felt Problem unsichtbar; nur Magic-Wand-Fragen, keine Features.  
+> `/ci-default` — letzter Promise vs. Delivery; ein Reliability-Deposit; nächster kleiner Ask.

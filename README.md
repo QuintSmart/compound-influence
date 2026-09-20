@@ -20,12 +20,24 @@ Then enable the local plugin in Cursor and **Reload Window**.
 
 ## Skills
 
+### Fast doors
+
 | Skill | Job |
 | --- | --- |
 | `ci-akte` | Create / open / show the Briefing Akte |
-| `ci-diagnose` | Pre-pitch Buyer + Felt Problem + Pain/Cost/Gain |
-| `ci-frame` | Headline–Insights–CTA rewrite (works ohne Akte) |
+| `ci-diagnose` | Quick pre-pitch Buyer + Felt Problem + Pain/Cost/Gain |
+| `ci-frame` | One-shot Headline–Insights–CTA rewrite (works ohne Akte) |
 | `ci-live` | 2–3 live reply options; ablehnen skips write-back |
+
+### Deep coaching
+
+| Skill | Job |
+| --- | --- |
+| `ci-pcg` | Pain/Cost/Gain one beat at a time |
+| `ci-hic` | Headline–Insights–CTA drill (CTA first) |
+| `ci-buyer` | Buyer Map / Wants–Fears–Constraints |
+| `ci-mirror` | Mirror questions only when Felt Problem is invisible |
+| `ci-default` | Reliability deposit + next small Open Ask |
 
 Open `/ci-help` for the same doors.
 
@@ -33,7 +45,7 @@ Open `/ci-help` for the same doors.
 
 1. Install and reload.
 2. Open `/ci-help`.
-3. Point `/ci-diagnose` at [`samples/demo-offer-brief.md`](samples/demo-offer-brief.md) and a sandbox Briefing path (temp folder or a MyPKMS test project under `S03 …/Briefing/`).
+3. Run `/ci-pcg` or `/ci-diagnose` against [`samples/demo-offer-brief.md`](samples/demo-offer-brief.md) and a sandbox Briefing path.
 4. Confirm Write-back once, then skip / ohne Akte once.
 
 ## Verify without Cursor UI

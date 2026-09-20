@@ -10,7 +10,7 @@ Live-negotiation door for a heated moment.
 ## Do first
 
 1. Read `references/context-contract.md`.
-2. Read `references/wang-influence-cards.md` and `references/negotiation-basics-card.md`.
+2. Read `references/authority-engagement-card.md` and `references/negotiation-basics-card.md` (plus short Wang overview if needed).
 3. Soft Akte: use existing / create / ohne Akte.
 
 ## Default
