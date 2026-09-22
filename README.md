@@ -1,22 +1,26 @@
 # Compound Influence
 
-English Cursor plugin chrome for QuintSmart offer, pricing, and stakeholder buy-in.
+Agent skill pack for offer, pricing, and stakeholder buy-in (Wang frameworks + QuintSmart arena).
 
-A soft `influence-akte.md` under PKMS **S03 QuintSmart/…/Briefing/** is the long-term memory. Framework cards ship in this repo. The product name is Compound Influence.
+Runs as a **Cursor** local plugin and, for guests, as a **Claude Code** project pack. Framework cards ship in this repo. Soft `influence-akte.md` under PKMS **S03 QuintSmart/…/Briefing/** is optional long-term memory (or `COMPOUND_INFLUENCE_VAULT` sandbox). Guests can always say **ohne Akte**.
+
+Early guest notes: [`docs/for-claire.md`](docs/for-claire.md).
 
 ## Install
 
 Copy this checkout. Do not symlink it.
 
 ```bash
-python3 scripts/install.py
+python3 scripts/install.py --target cursor   # ~/.cursor/plugins/local/compound-influence
+python3 scripts/install.py --target claude   # ~/.claude/compound-influence (+ skill mirrors)
+python3 scripts/install.py --target both
 ```
 
-That writes a real directory to `~/.cursor/plugins/local/compound-influence`.
+**Cursor:** enable the local plugin **Compound Influence**, then **Reload Window**.
 
-Then enable the local plugin in Cursor and **Reload Window**.
+**Claude Code:** open this git checkout (so `references/` resolve). See `CLAUDE.md`.
 
-**Never store a live Akte in this checkout.** Akten live in the MyPKMS S03 Briefing path.
+**Never store a live Akte in this checkout.**
 
 ## Skills
 

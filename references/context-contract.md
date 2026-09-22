@@ -23,7 +23,9 @@ Plugin chrome naming stays `ci-*` / Compound Influence. Operator-facing prompts 
 
 Obsidian MCP is fallback only when the local vault path is unavailable.
 
-Never store a live Akte inside the Compound Influence plugin checkout (repo or `~/.cursor/plugins/local/compound-influence`).
+Never store a live Akte inside the Compound Influence plugin checkout (repo, `~/.cursor/plugins/local/compound-influence`, or `~/.claude/compound-influence`).
+
+Guests without MyPKMS: prefer **ohne Akte**, or set `COMPOUND_INFLUENCE_VAULT` to a sandbox folder that mirrors `S03 QuintSmart/300-399 Projects/<slug>/Briefing/`.
 
 ## Soft entry (not a gate)
 

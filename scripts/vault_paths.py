@@ -25,6 +25,7 @@ def plugin_checkout_roots() -> list[Path]:
     roots = [
         Path(__file__).resolve().parents[1],
         Path.home() / ".cursor" / "plugins" / "local" / "compound-influence",
+        Path.home() / ".claude" / "compound-influence",
     ]
     return [p.resolve() for p in roots]
 

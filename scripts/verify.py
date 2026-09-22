@@ -212,7 +212,15 @@ def check_install_copy(root: Path = ROOT) -> None:
         for leaked in ("docs", ".git", "fixtures", "tests", "samples"):
             if (dest / leaked).exists():
                 raise SystemExit(f"copy-install leaked skipped name: {leaked}")
-        for required in (".cursor-plugin", "skills", "commands", "references", "scripts", "README.md"):
+        for required in (
+            ".cursor-plugin",
+            "skills",
+            "commands",
+            "references",
+            "scripts",
+            "README.md",
+            "CLAUDE.md",
+        ):
             if not (dest / required).exists():
                 raise SystemExit(f"copy-install missing {required}")
         linked = Path(tmp) / "linked"
