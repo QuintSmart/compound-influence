@@ -4,21 +4,22 @@ Agent skill pack for offer, pricing, and stakeholder buy-in (Wang frameworks + Q
 
 Runs as a **Cursor** local plugin and, for guests, as a **Claude Code** project pack. Framework cards ship in this repo. Soft `influence-akte.md` under PKMS **S03 QuintSmart/…/Briefing/** is optional long-term memory (or `COMPOUND_INFLUENCE_VAULT` sandbox). Guests can always say **ohne Akte**.
 
-Early guest notes: [`docs/for-claire.md`](docs/for-claire.md).
+Public repo: [github.com/QuintSmart/compound-influence](https://github.com/QuintSmart/compound-influence).  
+Guest walkthrough (no invite, **Python optional**): [`docs/for-claire.md`](docs/for-claire.md).
 
 ## Install
 
-Copy this checkout. Do not symlink it.
+**Claude Code (simplest, no Python):** clone or [Download ZIP](https://github.com/QuintSmart/compound-influence/archive/refs/heads/main.zip), open that folder in Claude Code. See `CLAUDE.md`.
+
+**Cursor without Python:** copy the folder to `~/.cursor/plugins/local/compound-influence`, enable the local plugin, Reload Window. Details in `docs/for-claire.md`.
+
+**Optional installer (needs Python 3):** copy this checkout — do not symlink it.
 
 ```bash
 python3 scripts/install.py --target cursor   # ~/.cursor/plugins/local/compound-influence
 python3 scripts/install.py --target claude   # ~/.claude/compound-influence (+ skill mirrors)
 python3 scripts/install.py --target both
 ```
-
-**Cursor:** enable the local plugin **Compound Influence**, then **Reload Window**.
-
-**Claude Code:** open this git checkout (so `references/` resolve). See `CLAUDE.md`.
 
 **Never store a live Akte in this checkout.**
 

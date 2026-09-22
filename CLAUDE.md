@@ -18,10 +18,14 @@ If they mention `ci-*`, `/ci-help`, Pain/Cost/Gain, Headline–Insights–CTA, b
 - Skip write-back phrases: `skip`, `ohne Akte`, `ablehnen`, `kein Write-back`
 - Product name: Compound Influence. Chrome ids stay `ci-*`.
 
-## Install reminder
+## Setup (no Python required)
+
+Prefer working **inside this git checkout** (or an unzipped download of it) so relative `references/` paths resolve. Opening the folder in Claude Code is enough.
+
+Optional durable copy (only if you have Python 3):
 
 ```bash
 python3 scripts/install.py --target claude
 ```
 
-That copies this pack to `~/.claude/compound-influence` for a durable local copy. Prefer working **inside this git checkout** so relative `references/` paths resolve.
+That copies the pack to `~/.claude/compound-influence`. Guest walkthrough: `docs/for-claire.md`.
